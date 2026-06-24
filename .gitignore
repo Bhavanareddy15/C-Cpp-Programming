@@ -1,0 +1,8 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+
+# Optional: build artifacts
+*.obj
+*.pdb
