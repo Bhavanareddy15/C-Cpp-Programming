@@ -32,16 +32,15 @@ int main() {
     }
     printf("\n");
 
-    //accessing it via pointer
-    for (int i=0; i<n; i++){
-        printf("%d ", *arr);
-        arr+=1;
+    // accessing it via pointer
+    int *ptr = arr;          // separate pointer for walking
+    for (int i = 0; i < n; i++) {
+        printf("%d ", *ptr);
+        ptr += 1;            // move ptr, not arr
     }
-    
-    
-    // 4. Always free the memory when finished
-    free(arr);
-    arr = NULL; // Prevent dangling pointer
+
+    free(arr);               // arr still points to start — safe
+    arr = NULL;
 
     
     return 0;
